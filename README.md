@@ -1,4 +1,4 @@
-# Initialize Proyect:
+# Initialize Proyect
 
 ```
 $ npm install
