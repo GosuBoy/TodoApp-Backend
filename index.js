@@ -26,9 +26,19 @@ app.get("/tasks", (req, res) => {
 // Update
 
 app.put("/tasks/:id", (req, res) => {
-  const { params } = req;
+  const { params, body } = req;
+  const { name, completed } = body;
   const { id } = params;
-  res.status(200).send(`update task ${id}`);
+
+  const item = data.find((item) => item.id === id);
+  console.log(completed);
+
+  if (name !== undefined && completed !== undefined) {
+    item.name = name;
+    item.completed = completed;
+  }
+
+  res.status(200).send(data);
 });
 
 // Delete
@@ -36,12 +46,32 @@ app.put("/tasks/:id", (req, res) => {
 app.delete("/tasks/:id", (req, res) => {
   const { params } = req;
   const { id } = params;
-  res.status(200).send(`delete task ${id}`);
+  //splice(start, deleteCount)
+  const itemIndex = data.findIndex((item) => item.id === id);
+
+  data.splice(itemIndex, 1);
+
+  res.status(200).send(`deleted task ${id}`);
 });
 
 // Error Handling middlewares
 
 //...
+app.use((req, res, next) => {
+  next({
+    statusCode: 404,
+    message: "Route Not Found",
+  });
+});
+
+app.use((err, req, res, next) => {
+  const { statusCode, message } = err;
+
+  res.status(statusCode);
+  res.json({
+    message,
+  });
+});
 
 app.listen(PORT, () =>
   console.log(`Listening on port http://localhost:${PORT}`)
