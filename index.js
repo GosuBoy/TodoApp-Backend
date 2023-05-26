@@ -31,7 +31,7 @@ app.put("/tasks/:id", (req, res) => {
   const { id } = params;
 
   const item = data.find((item) => item.id === id);
-  console.log(completed);
+  //console.log(completed);
 
   if (name !== undefined && completed !== undefined) {
     item.name = name;
