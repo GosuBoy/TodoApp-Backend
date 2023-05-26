@@ -13,9 +13,10 @@ $ npm start
 
 > #### base_url/tasks
 
-- #### Response body:
+- #### Response
 
 ```
+// body:
 [
     {
         name: String,
@@ -30,9 +31,10 @@ $ npm start
 
 > #### base_url/tasks
 
-- #### Request body:
+- #### Request
 
 ```
+// body:
 {
   name: String,
   id: String (UUID),
@@ -40,30 +42,39 @@ $ npm start
 }
 ```
 
-### UPDATE:
+- #### Response
+
+```
+// status: 201
+```
+
+### PUT:
 
 > #### base_url/tasks/:id
 
-- #### Request body:
+- #### Request
 
 ```
+// body:
 {
   name: String,
   completed: Boolean,
 }
+```
+
+- #### Response
+
+```
+// status: 200
 ```
 
 ### DELETE:
 
 > #### base_url/tasks/:id
 
-- #### Request body: -none-
-
-- #### Response body: -none-
+- #### Response
 
 ```
-{
-  name: String,
-  completed: Boolean,
-}
+// status: 202
+
 ```
