@@ -7,7 +7,7 @@ $ npm start
 
 ## API
 
-#### _ base_url: http://localhost:8080/ _
+- #### base_url: http://localhost:8080/ \*
 
 ### GET:
 
