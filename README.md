@@ -9,9 +9,10 @@ $ npm start
 
 > base_url: http://localhost:8080/
 
-- GET: base_url/tasks
+- ### GET: base_url/tasks
+  - #### Response body:
   ```
-  res.body = [
+  [
       {
           name: String,
           id: String (UUID),
