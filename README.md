@@ -17,9 +17,18 @@ $ npm start
           name: String,
           id: String (UUID),
           completed: Boolean,
-      }...
+      } ,
+      ...
   ]
   ```
 - POST: base_url/tasks
+  - #### Request body:
+  ```
+  {
+    name: String,
+    id: String (UUID),
+    completed: Boolean,
+  }
+  ```
 - UPDATE: base_url/tasks/:id
 - DELETE: base_url/tasks/:id
