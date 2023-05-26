@@ -25,9 +25,7 @@ $ npm start
 ]
 ```
 
-### POST:
-
-> #### base_url/tasks
+### POST: [*base_url/tasks*](http://localhost:8080/tasks)
 
 - #### Request
 
@@ -46,9 +44,7 @@ $ npm start
 // status: 201
 ```
 
-### PUT:
-
-> #### base_url/tasks/:id
+### PUT: [*base_url/tasks/:id*](http://localhost:8080/tasks/:id)
 
 - #### Request
 
@@ -66,9 +62,7 @@ $ npm start
 // status: 200
 ```
 
-### DELETE:
-
-> #### base_url/tasks/:id
+### DELETE: [*base_url/tasks/:id*](http://localhost:8080/tasks)
 
 - #### Response
 
