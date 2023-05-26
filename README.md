@@ -7,11 +7,11 @@ $ npm start
 
 ## API
 
-> base_url: http://localhost:8080/
+#### base_url: http://localhost:8080/
 
 ### GET:
 
-> #### base_url/tasks
+> #### [base_url:](http://localhost:8080/)/tasks
 
 - #### Response
 
