@@ -9,7 +9,16 @@ $ npm start
 
 > base_url: http://localhost:8080/
 
-- GET base_url/tasks
-- POST base_url/tasks
-- UPDATE base_url/tasks/:id
-- DELETE base_url/tasks/:id
+- GET: base_url/tasks
+  ```
+  res.body = [
+      {
+          name: String,
+          id: String (UUID),
+          completed: Boolean,
+      }...
+  ]
+  ```
+- POST: base_url/tasks
+- UPDATE: base_url/tasks/:id
+- DELETE: base_url/tasks/:id
