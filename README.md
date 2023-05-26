@@ -1,12 +1,12 @@
-## Initialize Proyect:
+# Initialize Proyect:
 
 ```
 $ npm install
 $ npm start
-
 ```
 
-> API
+## API
+
 > base_url: http://localhost:8080/
 
 - GET base_url/tasks
