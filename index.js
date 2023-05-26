@@ -1,9 +1,12 @@
 const express = require("express");
 let { data } = require("./data");
 
+const cors = require('cors'); 
+
 const app = express();
 const PORT = 8080;
 
+app.use(cors());
 // CRUD //
 app.use(express.json());
 // Create
