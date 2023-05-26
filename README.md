@@ -40,5 +40,30 @@ $ npm start
 }
 ```
 
-- UPDATE: base_url/tasks/:id
-- DELETE: base_url/tasks/:id
+### UPDATE:
+
+> #### base_url/tasks/:id
+
+- #### Request body:
+
+```
+{
+  name: String,
+  completed: Boolean,
+}
+```
+
+### DELETE:
+
+> #### base_url/tasks/:id
+
+- #### Request body: -none-
+
+- #### Response body: -none-
+
+```
+{
+  name: String,
+  completed: Boolean,
+}
+```
