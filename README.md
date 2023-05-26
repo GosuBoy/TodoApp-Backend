@@ -9,9 +9,7 @@ $ npm start
 
 ### *base_url: http://localhost:8080*
 
-### GET:
-
-> #### _ [base_url/tasks](http://localhost:8080/tasks) _
+### GET: [*base_url/tasks*](http://localhost:8080/tasks)
 
 - #### Response
 
