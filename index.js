@@ -1,7 +1,7 @@
 const express = require("express");
 let { data } = require("./data");
 
-const cors = require('cors'); 
+const cors = require("cors");
 
 const app = express();
 const PORT = 8080;
@@ -17,7 +17,7 @@ app.post("/tasks", (req, res) => {
   data = [...data, newTask];
 
   console.log(data);
-  res.status(200).send("create tasks");
+  res.status(201).send("create tasks");
 });
 
 // Read
@@ -36,10 +36,9 @@ app.put("/tasks/:id", (req, res) => {
   const item = data.find((item) => item.id === id);
   //console.log(completed);
 
-  if (name !== undefined && completed !== undefined) {
-    item.name = name;
-    item.completed = completed;
-  }
+  if (name !== undefined) item.name = name;
+
+  if (completed !== undefined) item.completed = completed;
 
   res.status(200).send(data);
 });
@@ -54,7 +53,7 @@ app.delete("/tasks/:id", (req, res) => {
 
   data.splice(itemIndex, 1);
 
-  res.status(200).send(`deleted task ${id}`);
+  res.status(202).send(`deleted task ${id}`);
 });
 
 // Error Handling middlewares
